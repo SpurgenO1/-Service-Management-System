@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Dashboard - TechServe</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fw-bold" href="#">TechServe Client</a>
+    <div class="navbar-nav w-100 d-flex justify-content-end px-3">
+      <div class="nav-item text-nowrap">
+        <span class="text-white me-3" id="userNameDisplay"></span>
+        <button class="btn btn-sm btn-outline-light" onclick="logout()">Sign out</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-white sidebar collapse shadow-sm pt-3">
+        <div class="position-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link sidebar-link active" href="#" id="view-requests-tab">My Requests</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link sidebar-link" href="#" id="create-request-tab">Create Request</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 pt-4">
+        
+        <!-- View Requests Section -->
+        <div id="view-requests-section">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center mb-3">
+            <h1 class="h2">My Service Requests</h1>
+          </div>
+          <div class="table-responsive bg-white shadow-sm p-3 rounded">
+            <table class="table table-striped table-hover align-middle">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Service Type</th>
+                  <th>Priority</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="requestsTableBody">
+                <!-- Data will be populated here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Create Request Section -->
+        <div id="create-request-section" class="d-none">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center mb-3">
+            <h1 class="h2">Create New Request</h1>
+          </div>
+          <div class="card shadow-sm border-0 col-md-8">
+            <div class="card-body">
+              <form id="createRequestForm">
+                <div class="mb-3">
+                  <label class="form-label">Service Type</label>
+                  <select class="form-select" id="reqType" required>
+                    <option value="">Select Service...</option>
+                    <option value="Website Development">Website Development</option>
+                    <option value="Bug Fixing">Bug Fixing</option>
+                    <option value="Software Maintenance">Software Maintenance</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Priority</label>
+                  <select class="form-select" id="reqPriority" require>
+                    <option value="Low">Low</option>
+                    <option value="Medium" selected>Medium</option>
+                    <option value="High">High</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Description</label>
+                  <textarea class="form-control" id="reqDescription" rows="4" required placeholder="Describe your requirements or the issue in detail..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Request</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Feedback Modal -->
+        <div class="modal fade" id="feedbackModal" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header border-0">
+                <h5 class="modal-title">Provide Feedback</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <form id="feedbackForm">
+                  <input type="hidden" id="feedbackReqId">
+                  <div class="mb-3">
+                    <label class="form-label">Rating (1 to 5)</label>
+                    <input type="number" class="form-control" id="feedbackRating" min="1" max="5" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Comments</label>
+                    <textarea class="form-control" id="feedbackComments" rows="3"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-success">Submit Feedback</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/client.js"></script>
+</body>
+</html>
