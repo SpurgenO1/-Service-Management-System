@@ -3,11 +3,19 @@ const User = require('../models/User');
 
 exports.getAllRequests = async (req, res) => {
   try {
-    const requests = await ServiceRequest.find({})
+    const { status, priority, sort = 'createdAt', order = 'desc' } = req.query;
+    const filter = {};
+    if (status) filter.status = status;
+    if (priority) filter.priority = priority;
+
+    const sortField = ['createdAt', 'priority', 'status'].includes(sort) ? sort : 'createdAt';
+    const sortOrder = order === 'asc' ? 1 : -1;
+
+    const requests = await ServiceRequest.find(filter)
       .populate('client', 'name email')
       .populate('assignedDev', 'name email')
       .populate('assignedTester', 'name email')
-      .sort({ createdAt: -1 });
+      .sort({ [sortField]: sortOrder });
     res.json(requests);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -21,11 +29,11 @@ exports.updateRequestByAdmin = async (req, res) => {
 
     if (!request) return res.status(404).json({ message: 'Request not found' });
 
-    if (status) request.status = status;
-    if (assignedDev) request.assignedDev = assignedDev;
-    if (assignedTester) request.assignedTester = assignedTester;
-    if (priority) request.priority = priority;
-    if (slaDeadline) request.slaDeadline = slaDeadline;
+    if (status !== undefined) request.status = status;
+    if (assignedDev !== undefined) request.assignedDev = assignedDev || null;
+    if (assignedTester !== undefined) request.assignedTester = assignedTester || null;
+    if (priority !== undefined) request.priority = priority;
+    if (slaDeadline !== undefined) request.slaDeadline = slaDeadline || null;
 
     // Default status logic based on assignment
     if (assignedDev && request.status === 'Pending Approval') {

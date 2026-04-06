@@ -3,94 +3,220 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechServe - IT Solutions</title>
+  <link rel="icon" href="/images/techserve-logo.svg" type="image/svg+xml" sizes="any">
+  <title>TechServe — Service Management &amp; Software Delivery</title>
+  <meta name="description" content="TechServe: service delivery with requests, workflows, QA, and client transparency in one platform.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
 </head>
-<body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">TechServe Systems</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="btn btn-outline-light ms-2" href="auth.html">Login / Register</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<body class="site-public" data-page="home">
+  <div id="site-header-mount"></div>
 
-  <!-- Hero Section -->
-  <header class="hero d-flex align-items-center text-white text-center bg-dark" style="min-height: 100vh;">
-    <div class="container">
-      <h1 class="display-3 fw-bold mb-4">Enterprise Grade Software Solutions</h1>
-      <p class="lead mb-5">We provide premium website development, bug fixing, and software maintenance services for businesses worldwide.</p>
-      <a href="auth.html" class="btn btn-primary btn-lg me-3">Get Started</a>
-      <a href="#services" class="btn btn-outline-light btn-lg">Our Services</a>
-    </div>
-  </header>
-
-  <!-- About Section -->
-  <section id="about" class="py-5">
-    <div class="container py-5">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <h2 class="fw-bold mb-4">About TechServe</h2>
-          <p class="text-muted">TechServe is a premier software company dedicated to building robust and scalable applications. With a skilled team of developers, testers, and dedicated project managers, we ensure seamless delivery of software projects from start to finish.</p>
-          <ul class="list-unstyled text-muted">
-            <li class="mb-2">✓ High-Quality Code Standards</li>
-            <li class="mb-2">✓ Strict SLA Compliance</li>
-            <li class="mb-2">✓ Comprehensive QA & Testing</li>
-          </ul>
-        </div>
-        <div class="col-lg-6">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="About Team" class="img-fluid rounded shadow">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="py-5 bg-light">
-    <div class="container py-5">
-      <h2 class="text-center fw-bold mb-5">Our Services</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm p-4 text-center service-card">
-            <h3 class="h5 fw-bold mt-3">Website Development</h3>
-            <p class="text-muted mt-3">Stunning, modern web applications tailored to your precise business requirements.</p>
+  <main>
+    <header class="hero-sparx">
+      <div class="container py-5">
+        <div class="row g-4 g-lg-5 align-items-center">
+          <div class="col-lg-6 order-lg-1">
+            <div class="hero-badge"><span class="dot" aria-hidden="true"></span> Service management platform</div>
+            <h1 class="display-title-xl mb-3">Service delivery with clarity from intake to handover</h1>
+            <p class="lead-xl mb-4">Submit requests, track every stage, and collaborate with developers and QA in one secure experience—built for measurable outcomes, not inbox chaos.</p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="/auth.html" class="btn btn-brand btn-lg px-4 rounded-pill">Client portal</a>
+              <a href="/services.html" class="btn btn-ghost-light btn-lg rounded-pill">Explore services</a>
+            </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm p-4 text-center service-card">
-            <h3 class="h5 fw-bold mt-3">Bug Fixing</h3>
-            <p class="text-muted mt-3">Rapid identification and resolution of software defects to ensure minimal downtime.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm p-4 text-center service-card">
-            <h3 class="h5 fw-bold mt-3">Software Maintenance</h3>
-            <p class="text-muted mt-3">Ongoing technical support, performance tuning, and updates for legacy applications.</p>
+          <div class="col-lg-6 order-lg-2">
+            <figure class="hero-figure hero-figure--sparx">
+              <img
+                src="/images/hero-home.jpg"
+                alt="Professional reviewing data and service metrics on screen"
+                width="1400"
+                height="900"
+                fetchpriority="high"
+                decoding="async">
+            </figure>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white py-4 text-center">
-    <div class="container">
-      <p class="mb-0">© 2026 TechServe Systems. All rights reserved.</p>
-      <small class="text-muted">Contact: support@techserve.com | +1 800 555 0199</small>
+    <div class="trust-strip" role="presentation">
+      <div class="container px-4">
+        Trusted workflow model · Role-based access · QA before delivery
+      </div>
     </div>
-  </footer>
+
+    <section class="sparx-metrics" aria-labelledby="metrics-heading">
+      <h2 id="metrics-heading" class="visually-hidden">Platform metrics</h2>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="sparx-metric">
+              <span class="sparx-metric__num">5+</span>
+              <span class="sparx-metric__label">Lifecycle stages from submission through closure, visible to every stakeholder.</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="sparx-metric">
+              <span class="sparx-metric__num">24/7</span>
+              <span class="sparx-metric__label">Self-serve portal access so clients check status on their schedule.</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="sparx-metric">
+              <span class="sparx-metric__num">4</span>
+              <span class="sparx-metric__label">Aligned roles—client, admin, developer, and tester—with clear ownership.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-case-studies" aria-labelledby="cases-heading">
+      <div class="container">
+        <p class="section-kicker text-center mb-2">Impact-first delivery</p>
+        <h2 id="cases-heading" class="section-title text-center h1 mb-2">How teams use TechServe</h2>
+        <p class="text-center text-muted mx-auto mb-5" style="max-width: 560px;">Representative scenarios—your workflows map to the same transparent pipeline.</p>
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <article class="case-card-sparx">
+              <div class="case-card-sparx__media">
+                <img src="/images/case/operations.jpg" alt="Team reviewing business metrics and operations" width="1200" height="600" loading="lazy" decoding="async">
+              </div>
+              <div class="case-card-sparx__body">
+                <p class="case-card-sparx__eyebrow">Operations</p>
+                <h3 class="case-card-sparx__title">Centralized IT and software requests</h3>
+                <p>Priorities and SLAs stay visible to leadership; no more status threads lost in email.</p>
+                <ul class="case-tags">
+                  <li>Workflow</li>
+                  <li>SLA</li>
+                  <li>Reporting</li>
+                </ul>
+                <a class="case-card-sparx__more" href="/contact.html">Talk to us</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="case-card-sparx">
+              <div class="case-card-sparx__media">
+                <img src="/images/case/product.jpg" alt="Professionals collaborating on product and planning" width="1200" height="600" loading="lazy" decoding="async">
+              </div>
+              <div class="case-card-sparx__body">
+                <p class="case-card-sparx__eyebrow">Product</p>
+                <h3 class="case-card-sparx__title">Build and QA in one line of sight</h3>
+                <p>Product owners follow development and test stages without chasing updates from multiple channels.</p>
+                <ul class="case-tags">
+                  <li>Development</li>
+                  <li>QA</li>
+                  <li>Portal</li>
+                </ul>
+                <a class="case-card-sparx__more" href="/auth.html">Open portal</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="case-card-sparx">
+              <div class="case-card-sparx__media">
+                <img src="/images/case/providers.jpg" alt="Diverse team working together in an office" width="1200" height="600" loading="lazy" decoding="async">
+              </div>
+              <div class="case-card-sparx__body">
+                <p class="case-card-sparx__eyebrow">Providers</p>
+                <h3 class="case-card-sparx__title">Scale delivery with clear assignment</h3>
+                <p>Admins filter and sort the queue; developers and testers own tickets with full audit context.</p>
+                <ul class="case-tags">
+                  <li>Admin</li>
+                  <li>Assignment</li>
+                  <li>Scale</li>
+                </ul>
+                <a class="case-card-sparx__more" href="/about.html">Our approach</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-capabilities" aria-labelledby="cap-heading">
+      <div class="container">
+        <p class="section-kicker text-center mb-2">Platform capabilities</p>
+        <h2 id="cap-heading" class="section-title text-center h1 mb-2">Everything in one controlled pipeline</h2>
+        <p class="text-center text-muted mx-auto mb-5" style="max-width: 520px;">From security to notifications—designed for enterprise-style service delivery.</p>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="capability-card">
+              <div class="capability-card__icon" aria-hidden="true"><i class="bi bi-diagram-3"></i></div>
+              <h3>End-to-end visibility</h3>
+              <p>Approval, build, test, and delivery—status updates in real time for clients and internal teams.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="capability-card">
+              <div class="capability-card__icon" aria-hidden="true"><i class="bi bi-shield-lock"></i></div>
+              <h3>Role-based security</h3>
+              <p>Account protection, validation, and lockout policies so access stays appropriate for each role.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="capability-card">
+              <div class="capability-card__icon" aria-hidden="true"><i class="bi bi-bell"></i></div>
+              <h3>Notifications</h3>
+              <p>Stakeholders stay informed as requests move through the lifecycle without manual chasing.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="capability-card">
+              <div class="capability-card__icon" aria-hidden="true"><i class="bi bi-speedometer2"></i></div>
+              <h3>Priorities and deadlines</h3>
+              <p>Capture urgency and target dates so engineering aligns with business expectations.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="capability-card">
+              <div class="capability-card__icon" aria-hidden="true"><i class="bi bi-clipboard-check"></i></div>
+              <h3>QA gates</h3>
+              <p>Verification before handover—reducing rework and giving clients confidence in each release.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="capability-card">
+              <div class="capability-card__icon" aria-hidden="true"><i class="bi bi-key"></i></div>
+              <h3>Secure recovery</h3>
+              <p>Password reset with token-based flows and optional email delivery for operational flexibility.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-testimonial" aria-labelledby="quote-heading">
+      <div class="container">
+        <blockquote class="testimonial-sparx">
+          <p id="quote-heading" class="testimonial-sparx__quote">“We finally have one place where requests, ownership, and QA sign-off are obvious. Leadership sees SLAs; the team spends less time on status meetings.”</p>
+          <footer>
+            <p class="testimonial-sparx__author mb-0">Director of Operations</p>
+            <p class="testimonial-sparx__role mb-0">Representative client scenario</p>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="partner-cta-sparx" aria-labelledby="partner-cta-heading">
+      <div class="container">
+        <div class="partner-cta-sparx__inner">
+          <h2 id="partner-cta-heading">Want higher ROI from structured service delivery?</h2>
+          <p>Partner with a platform mindset: traceable workflows, clear roles, and clients who always know what is next.</p>
+          <div class="d-flex flex-wrap justify-content-center gap-2">
+            <a href="/contact.html" class="btn btn-brand btn-lg px-4 rounded-pill">Contact us</a>
+            <a href="/auth.html" class="btn btn-brand-outline btn-lg px-4 rounded-pill">Client portal</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-mount"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/site-chrome.js"></script>
 </body>
 </html>

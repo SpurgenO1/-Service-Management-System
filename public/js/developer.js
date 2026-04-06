@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         container.innerHTML += `
           <div class="col-md-6 mb-4">
-            <div class="card shadow-sm border-0 h-100">
+            <div class="card table-card border-0 h-100">
               <div class="card-header bg-white fw-bold d-flex justify-content-between">
                 <span>Task ID: ${task._id.substring(task._id.length - 6).toUpperCase()}</span>
                 <span class="badge bg-secondary">${task.priority} Priority</span>

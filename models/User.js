@@ -19,6 +19,22 @@ const userSchema = new mongoose.Schema({
     enum: ['client', 'admin', 'developer', 'tester'],
     default: 'client',
   },
+  failedLoginAttempts: {
+    type: Number,
+    default: 0,
+  },
+  lockUntil: {
+    type: Date,
+    default: null,
+  },
+  resetPasswordToken: {
+    type: String,
+    default: null,
+  },
+  resetPasswordExpire: {
+    type: Date,
+    default: null,
+  },
   createdAt: {
     type: Date,
     default: Date.now,

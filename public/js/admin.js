@@ -26,10 +26,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   };
 
+  const buildQuery = () => {
+    const params = new URLSearchParams();
+    const status = document.getElementById('filterStatus').value;
+    const priority = document.getElementById('filterPriority').value;
+    const sort = document.getElementById('filterSort').value;
+    const order = document.getElementById('filterOrder').value;
+    if (status) params.set('status', status);
+    if (priority) params.set('priority', priority);
+    if (sort) params.set('sort', sort);
+    if (order) params.set('order', order);
+    const q = params.toString();
+    return q ? `?${q}` : '';
+  };
+
   // Load All Requests
   const loadRequests = async () => {
     try {
-      const res = await fetch('/api/admin/requests', {
+      const res = await fetch(`/api/admin/requests${buildQuery()}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await res.json();
@@ -84,6 +98,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     assignModalInstance.show();
   };
+
+  document.getElementById('applyFiltersBtn').addEventListener('click', () => loadRequests());
+  document.getElementById('clearFiltersBtn').addEventListener('click', () => {
+    document.getElementById('filterStatus').value = '';
+    document.getElementById('filterPriority').value = '';
+    document.getElementById('filterSort').value = 'createdAt';
+    document.getElementById('filterOrder').value = 'desc';
+    loadRequests();
+  });
 
   assignForm.addEventListener('submit', async (e) => {
     e.preventDefault();

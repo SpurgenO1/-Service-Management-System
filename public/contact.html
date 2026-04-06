@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/techserve-logo.svg" type="image/svg+xml" sizes="any">
+  <title>Contact — TechServe</title>
+  <meta name="description" content="Contact TechServe for sales, support, and general inquiries.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+</head>
+<body class="site-public" data-page="contact">
+  <div id="site-header-mount"></div>
+
+  <main>
+    <header class="page-hero">
+      <div class="container position-relative" style="z-index: 1;">
+        <p class="section-kicker mb-2">Let’s talk</p>
+        <h1 class="display-5 fw-bold mb-3">What’s on your mind?</h1>
+        <p class="lead mb-0">Sales, partnerships, or support—we respond within one business day.</p>
+      </div>
+    </header>
+
+    <section class="py-5">
+      <div class="container py-lg-3">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5">
+            <div class="contact-hero-img mb-4">
+              <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Office reception and workspace" width="900" height="600" loading="lazy">
+            </div>
+            <p class="section-kicker">Direct</p>
+            <h2 class="section-title h3 mb-4">Let’s talk</h2>
+            <p class="text-muted mb-4">For existing clients, the fastest path is often the <a href="/auth.html" class="link-on-light">client portal</a>—submit a service request and track it there.</p>
+            <div class="card-elevated p-4 border-0 mb-3">
+              <h3 class="h6 fw-bold mb-2">Email</h3>
+              <a href="mailto:support@techserve.com" class="link-on-light">support@techserve.com</a>
+            </div>
+            <div class="card-elevated p-4 border-0 mb-3">
+              <h3 class="h6 fw-bold mb-2">Phone</h3>
+              <a href="tel:+18005550199" class="link-on-light">+1 (800) 555-0199</a>
+            </div>
+            <div class="card-elevated p-4 border-0">
+              <h3 class="h6 fw-bold mb-2">Hours</h3>
+              <p class="text-muted small mb-0">Monday–Friday, 8:00–18:00 EST</p>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="card-elevated p-4 p-md-5 border-0 contact-form">
+              <h3 class="h5 fw-bold mb-4">Send a message</h3>
+              <p class="text-muted small mb-4">This form is for demo purposes. In production, connect it to your API or form backend.</p>
+              <form id="contactForm" onsubmit="event.preventDefault(); document.getElementById('contactThanks').classList.remove('d-none'); this.reset();">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="cName">Name</label>
+                    <input type="text" class="form-control" id="cName" required autocomplete="name">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="cEmail">Email</label>
+                    <input type="email" class="form-control" id="cEmail" required autocomplete="email">
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="cSubject">Subject</label>
+                    <input type="text" class="form-control" id="cSubject" required>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="cMessage">Message</label>
+                    <textarea class="form-control" id="cMessage" rows="5" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary btn-lg">Send message</button>
+                  </div>
+                </div>
+              </form>
+              <div id="contactThanks" class="alert alert-minimal mt-4 d-none mb-0" role="status">
+                Thanks—your message would be sent in a connected system. For real inquiries, use the email or phone above.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-mount"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/site-chrome.js"></script>
+</body>
+</html>

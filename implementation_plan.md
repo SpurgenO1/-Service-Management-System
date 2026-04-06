@@ -2,6 +2,8 @@
 
 This document outlines the architecture, database schema, API structure, and UI flow for the Service Management System.
 
+For the formal **SRS**, **API specification**, **database ER view**, **UML (Mermaid)**, **test plan**, **security design**, and **deployment** package, see the [`docs/`](./docs/README.md) folder.
+
 ## User Review Required
 
 > [!IMPORTANT]  

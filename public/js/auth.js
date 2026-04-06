@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
           localStorage.setItem('name', data.name);
           window.location.href = `/dashboards/${data.role}.html`;
         } else {
-          showAlert(data.message);
+          const msg = data.errors && data.errors[0] ? data.errors[0].msg : data.message;
+          showAlert(msg || 'Sign in failed');
         }
       } catch (err) {
         showAlert('An error occurred during login');
@@ -67,7 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
           localStorage.setItem('name', data.name);
           window.location.href = `/dashboards/client.html`;
         } else {
-          showAlert(data.message);
+          const msg = data.errors && data.errors[0] ? data.errors[0].msg : data.message;
+          showAlert(msg || 'Registration failed');
         }
       } catch (err) {
         showAlert('An error occurred during registration');

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="TechServe">
+  <defs>
+    <linearGradient id="tsg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5b4dff"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#tsg)"/>
+  <path fill="#ffffff" d="M16 17h32v7H38v17h-12V24H16v-7z"/>
+  <path fill="none" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" d="M20 48l6 6 14-14"/>
+</svg>
