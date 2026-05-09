@@ -1,21 +1,45 @@
-# Node.js
-# Build a general Node.js project with npm.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
-
 trigger:
-- main
+  - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'ubuntu-latest'
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '20.x'
-  displayName: 'Install Node.js'
+stages:
+  - stage: Build
+    displayName: 'Install & Build'
+    jobs:
+      - job: BackendBuild
+        displayName: 'Backend (Node.js/Express)'
+        steps:
+          - task: NodeTool@0
+            inputs:
+              versionSpec: '20.x'
+            displayName: 'Install Node.js'
 
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+          - script: npm install
+            displayName: 'Install backend dependencies'
+
+          - script: npm run build
+            displayName: 'Backend build (no-op for Node.js)'
+
+      - job: FrontendBuild
+        displayName: 'Frontend (React/Vite Dashboard)'
+        steps:
+          - task: NodeTool@0
+            inputs:
+              versionSpec: '20.x'
+            displayName: 'Install Node.js'
+
+          - script: npm install
+            workingDirectory: saas-dashboard
+            displayName: 'Install frontend dependencies'
+
+          - script: npm run build
+            workingDirectory: saas-dashboard
+            displayName: 'Build React dashboard'
+
+          - task: PublishBuildArtifacts@1
+            inputs:
+              pathToPublish: 'saas-dashboard/dist'
+              artifactName: 'frontend-dist'
+            displayName: 'Publish frontend build artifacts'
